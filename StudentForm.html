@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend><b>Student Form</b></legend>
+        <form method="post" action="#" enctype="multipart/form-data">
+
+            <label for="name">Name</label><br/>
+            <input id="name" type="text" pattern="[a-zA-Z ]{3,15}" placeholder="Enter name" name="uname" required/><br/><br/>
+
+            <label for="age">Age</label><br/>
+            <input id="age" type="number" placeholder="Enter age" name="age" min="1" max="120" required/><br/><br/>
+
+            <label>Gender</label><br/>
+            <input type="radio" id="male" name="gender" value="male" required/>
+            <label for="male">Male</label><br/>
+            <input type="radio" id="female" name="gender" value="female"/>
+            <label for="female">Female</label><br/><br/>
+
+            <label for="email">Email</label><br/>
+            <input type="email" id="email" name="email" placeholder="Enter email id" required/><br/><br/>
+
+            <label for="dob">DOB</label><br/>
+            <input type="date" id="dob" name="dob" required/><br/><br/>
+
+            <label for="country">Country</label><br/>
+            <select id="country" name="country">
+                <option value="" disabled selected hidden>---select country---</option>
+                <option value="India">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+            </select><br/><br/>
+
+            <label for="courses">Course</label><br/>
+            <select id="courses" name="courses" required>
+                <option value="" disabled selected hidden>---select course---</option>
+                <optgroup label="Programming Language">
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                </optgroup>
+                <optgroup label="FrontEnd">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="ReactJS">ReactJS</option>
+                </optgroup>
+                <optgroup label="BackEnd">
+                    <option value="MongoDB">MongoDB</option>
+                    <option value="NodeJS">NodeJS</option>
+                    <option value="SQL">SQL</option>
+                    <option value="PHP">PHP</option>
+                </optgroup>
+            </select><br/><br/>
+
+            <label for="image">Photo</label><br/>
+            <input type="file" id="image" name="image" accept="image/*" required/><br/><br/>
+
+            <label for="feedback">Feedback</label><br/>
+            <textarea id="feedback" name="feedback" rows="4" cols="30" placeholder="Enter your feedback"></textarea><br/><br/>
+
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+</html>
