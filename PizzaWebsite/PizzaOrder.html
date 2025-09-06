@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <h1>Order Your Pizza</h1>
+
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <p>Choose pizza size:</p>
+        <input type="radio" id="small" name="size" value="Small" required>
+        <label for="small">Small</label><br>
+
+        <input type="radio" id="medium" name="size" value="Medium">
+        <label for="medium">Medium</label><br>
+
+        <input type="radio" id="large" name="size" value="Large">
+        <label for="large">Large</label><br><br>
+
+        <p>Select Toppings:</p>
+        <input type="checkbox" id="cheese" name="toppings" value="Cheese">
+        <label for="cheese">Cheese</label><br>
+
+        <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+        <label for="pepperoni">Pepperoni</label><br>
+
+        <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+        <label for="mushrooms">Mushrooms</label><br>
+
+        <input type="checkbox" id="olives" name="toppings" value="Olives">
+        <label for="olives">Olives</label><br><br>
+
+        <label for="quantity">Quantity (1–10):</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+        <label for="instructions">Special Instructions:</label><br>
+        <textarea id="instructions" name="instructions" rows="4" cols="40" placeholder="Anything else? (optional)"></textarea><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
