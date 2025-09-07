@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff5ec, #f8f9fa);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  max-width: 460px;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+}
+
+h1 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 24px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+form {
+  background: #fff;
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  max-width: 460px;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+form:hover {
+  transform: translateY(-2px);
+}
+
+label {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 18px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 7px rgba(211,84,0,0.25);
+}
+
+p {
+  margin: 18px 0 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.option {
+  position: relative;
+}
+
+.option input {
+  display: none;
+}
+
+.option label {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.option input:checked + label {
+  background: #d35400;
+  color: #fff;
+  border-color: #d35400;
+  box-shadow: 0 3px 6px rgba(211,84,0,0.3);
+}
+
+button {
+  background: #d35400;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 20px;
+  }
+
+  form {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
