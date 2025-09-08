@@ -7,7 +7,6 @@
 
 body {
   background: linear-gradient(135deg, #fff5ec, #f8f9fa);
-  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,38 +16,32 @@ body {
 
 .form-container {
   background: #fff;
-  padding: 28px 32px;
   border-radius: 14px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   max-width: 460px;
   width: 100%;
   transition: transform 0.2s;
+  overflow: hidden;
 }
 
 .form-container:hover {
   transform: translateY(-2px);
 }
 
-h1 {
+.form-header {
+  background: #d35400;
+  padding: 16px;
   text-align: center;
-  color: #d35400;
-  margin-bottom: 24px;
-  font-size: 26px;
+}
+
+.form-header h1 {
+  color: #fff;
+  font-size: 24px;
   letter-spacing: 0.5px;
 }
 
 form {
-  background: #fff;
   padding: 28px 32px;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  max-width: 460px;
-  width: 100%;
-  transition: transform 0.2s;
-}
-
-form:hover {
-  transform: translateY(-2px);
 }
 
 label {
@@ -142,7 +135,7 @@ button:hover {
     padding: 22px;
   }
 
-  h1 {
-    font-size: 22px;
+  .form-header h1 {
+    font-size: 20px;
   }
 }

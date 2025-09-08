@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Order Form</title>
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
-    <h1>Order Your Pizza</h1>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Order Your Pizza</h1>
+    </div>
 
     <form action="/submit" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-        <p>Choose pizza size:</p>
-        <input type="radio" id="small" name="size" value="Small" required>
-        <label for="small">Small</label><br>
+      <p>Choose pizza size:</p>
+      <div class="option-group">
+        <div class="option">
+          <input type="radio" id="small" name="size" value="Small" required>
+          <label for="small">Small</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="medium" name="size" value="Medium">
+          <label for="medium">Medium</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="large" name="size" value="Large">
+          <label for="large">Large</label>
+        </div>
+      </div>
 
-        <input type="radio" id="medium" name="size" value="Medium">
-        <label for="medium">Medium</label><br>
+      <p>Select Toppings:</p>
+      <div class="option-group">
+        <div class="option">
+          <input type="checkbox" id="cheese" name="toppings" value="Cheese">
+          <label for="cheese">Cheese</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+          <label for="mushrooms">Mushrooms</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="olives" name="toppings" value="Olives">
+          <label for="olives">Olives</label>
+        </div>
+      </div>
 
-        <input type="radio" id="large" name="size" value="Large">
-        <label for="large">Large</label><br><br>
+      <label for="quantity">Quantity (1–10):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" required>
 
-        <p>Select Toppings:</p>
-        <input type="checkbox" id="cheese" name="toppings" value="Cheese">
-        <label for="cheese">Cheese</label><br>
+      <label for="instructions">Special Instructions:</label>
+      <textarea id="instructions" name="instructions" rows="4" cols="40" placeholder="Anything else? (optional)"></textarea>
 
-        <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
-        <label for="pepperoni">Pepperoni</label><br>
-
-        <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
-        <label for="mushrooms">Mushrooms</label><br>
-
-        <input type="checkbox" id="olives" name="toppings" value="Olives">
-        <label for="olives">Olives</label><br><br>
-
-        <label for="quantity">Quantity (1–10):</label><br>
-        <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
-
-        <label for="instructions">Special Instructions:</label><br>
-        <textarea id="instructions" name="instructions" rows="4" cols="40" placeholder="Anything else? (optional)"></textarea><br><br>
-
-        <button type="submit">Place Order</button>
+      <button type="submit">Place Order</button>
     </form>
-    </div>
+  </div>
 </body>
 </html>
