@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .loginModel{
+            width: 30%;
+            height: 100vh;
+            background-color: #ccc;
+            position: fixed;
+            right: -500px;
+            padding: 40px;
+            transition: 0.5s;
+            top: 0;
+        }
+
+        .loginModel span{
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .headingModel{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+
+        .headingModel h3{
+            font-size: 20px;
+        }
+
+        .loginModel form{
+            margin-top: 40px;
+        }
+        .loginModel form label{
+            display: block;
+        }
+
+        .loginModel form input{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .loginModel form button{
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 30px;
+            background: #194cff;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+
+        .loginModel form p{
+            margin-top: 15px;
+        }
+
+        .showModel{
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+<button id="login">Login</button>
+
+<div class="loginModel">
+    <span>&times</span>
+    <div class="headingModel">
+        <h3>Login</h3>
+        <p>Use Email, instead</p>
+    </div>
+
+    <form action="">
+        <label>Mobile Number</label>
+        <input type="number">
+        <button>Login</button>
+        <p>Don't have an account? <a href="">create an account</a></p>
+    </form>
+</div>
+
+<script>
+    let loginBtn = document.getElementById("login")
+    let closeBtn = document.querySelector(".loginModel span")
+    let loginModelElement = document.querySelector(".loginModel")
+    loginBtn.addEventListener("click", ()=>{
+        loginModelElement.classList.add("showModel")
+    });
+    closeBtn.addEventListener("click", ()=>{
+        loginModelElement.classList.remove("showModel")
+    });
+</script>
+</body>
+</html>
