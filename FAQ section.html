@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>FAQs Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 30px 0;
+            color: #333;
+        }
+
+        .faqMid {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .faqItems {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .faqItems:hover {
+            transform: translateY(-3px);
+        }
+
+        .faqItems h3 {
+            padding: 15px 20px;
+            background-color: #0288d1;
+            color: white;
+            position: relative;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faqItems h3:hover {
+            background-color: #0277bd;
+        }
+
+        .faqItems h3 span {
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .faqItems p {
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 15px 20px;
+            color: #555;
+            display: none;
+            background-color: #f9f9f9;
+        }
+
+        .showAns {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faqMid">
+        <div class="faqItems">
+            <h3>How do I create an account on LearnHub?<span>+</span></h3>
+            <p>You can sign up using your email or social media accounts. The process is quick and takes less than two minutes.</p>
+        </div>
+        <div class="faqItems">
+            <h3>What courses are available?<span>+</span></h3>
+            <p>We offer a wide range of courses from programming, design, business management, data science, and more, tailored to various skill levels.</p>
+        </div>
+        <div class="faqItems">
+            <h3>Can I access courses offline?<span>+</span></h3>
+            <p>Yes! Download course materials and videos to access them anytime without an internet connection.</p>
+        </div>
+        <div class="faqItems">
+            <h3>How can I track my learning progress?<span>+</span></h3>
+            <p>Our dashboard displays your course completion rate, quizzes attempted, and personalized recommendations to enhance your learning journey.</p>
+        </div>
+        <div class="faqItems">
+            <h3>What payment methods do you support?<span>+</span></h3>
+            <p>We accept credit/debit cards, net banking, UPI, and popular digital wallets for a smooth and secure payment experience.</p>
+        </div>
+        <div class="faqItems">
+            <h3>Do you offer certification upon course completion?<span>+</span></h3>
+            <p>Yes, you’ll receive verified certificates after successfully completing each course to boost your professional profile.</p>
+        </div>
+    </div>
+
+    <script>
+        let allQuestions = document.querySelectorAll(".faqItems h3");
+
+        allQuestions.forEach((item, currIdx) => {
+            item.addEventListener("click", () => {
+
+                allQuestions.forEach((heading, idx) => {
+                    if (currIdx != idx) {
+                        heading.lastElementChild.innerHTML = '+';
+                        heading.nextElementSibling.classList.remove("showAns");
+                    }
+                });
+
+                if (item.lastElementChild.innerHTML == '+') {
+                    item.lastElementChild.innerHTML = '-';
+                } else {
+                    item.lastElementChild.innerHTML = '+';
+                }
+
+                item.nextElementSibling.classList.toggle("showAns");
+            });
+        });
+    </script>
+</body>
+</html>
